@@ -53,10 +53,7 @@ There are two methods to run this script:
 ### ### Method 1: Run from Source Code (Recommended for Developers)
 
 1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git)
-    cd YOUR_REPOSITORY
-    ```
+
 
 2.  **Install system dependencies (on Debian/Ubuntu/NetHunter):**
     ```bash
