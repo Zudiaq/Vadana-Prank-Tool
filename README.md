@@ -20,7 +20,7 @@ An automated tool for sending password recovery requests to the Vadana education
 -   **Automatic CAPTCHA Solving:** Uses Tesseract OCR to automatically read and solve security codes.
 -   **Clean CLI:** Displays status using a progress bar and live logs directly in the terminal.
 -   **Headless Operation:** The script runs in the background without needing a visible browser window.
--   **Packagable:** Can be compiled into a standalone executable for Linux (NetHunter) and Windows (via WSL).
+-   **Packagable:** Can be compiled into a standalone executable for different architectures.
 
 ---
 
@@ -32,27 +32,48 @@ The misuse of this tool for harassment, spamming, or any illegal activities is s
 
 ## ## 🛠️ Requirements
 
-You will need the following tools to run this script.
-
-#### 1. To Run from Source Code:
--   **Python 3.9+**
--   **Google Chrome** or **Chromium Browser**
--   **Tesseract OCR Engine**
--   **ChromeDriver**
-
-#### 2. To Run the Packaged Executable (`.bin`):
--   Only **Google Chrome** or **Chromium Browser** is required.
+-   **Google Chrome** or **Chromium Browser** must be installed on the target system.
 
 ---
 
 ## ## ⚙️ Installation and Usage
 
-There are two methods to run this script:
+There are two primary ways to use this tool: running a pre-compiled release or running from the source code.
 
-### ### Method 1: Run from Source Code (Recommended for Developers)
+### ### Method 1: Run from a Pre-compiled Release (Recommended for Users)
+
+This is the easiest way to get started. No need to install Python or any dependencies.
+
+#### **On NetHunter / ARM-based Linux (e.g., Android Phone):**
+
+1.  Navigate to the [Releases](https://github.com/Zudiaq/Vadana-Prank-Tool/releases) page.
+2.  Download the `vada_bomber_ARM` asset.
+3.  Transfer the file to your NetHunter environment.
+4.  Open a terminal, make the file executable, and run it:
+    ```bash
+    chmod +x vada_bomber_ARM
+    ./vada_bomber_ARM
+    ```
+
+#### **On WSL / x86-based Linux (e.g., PC/Laptop):**
+
+1.  Navigate to the [Releases](https://github.com/Zudiaq/Vadana-Prank-Tool/releases) page.
+2.  Download the `vada_bomber_x86` asset.
+3.  Open a terminal in the download location, make the file executable, and run it:
+    ```bash
+    chmod +x vada_bomber_x86
+    ./vada_bomber_x86
+    ```
+
+---
+
+### ### Method 2: Run from Source Code (For Developers)
 
 1.  **Clone the repository:**
-
+    ```bash
+    git clone [https://github.com/Zudiaq/Vadana-Prank-Tool.git](https://github.com/Zudiaq/Vadana-Prank-Tool.git)
+    cd Vadana-Prank-Tool
+    ```
 
 2.  **Install system dependencies (on Debian/Ubuntu/NetHunter):**
     ```bash
@@ -61,14 +82,6 @@ There are two methods to run this script:
     ```
 
 3.  **Install Python libraries:**
-    Create a file named `requirements.txt` with the following content:
-    ```txt
-    selenium
-    pillow
-    pytesseract
-    rich
-    ```
-    Then, install them using `pip`:
     ```bash
     pip3 install -r requirements.txt
     ```
@@ -77,26 +90,6 @@ There are two methods to run this script:
     ```bash
     python3 script_name.py
     ```
-
-### ### Method 2: Use the Executable (For Regular Users)
-
-1.  **Download the file:**
-    Navigate to the **Releases** section of this GitHub repository and download the latest version of the executable file (`vadana_bomber`).
-
-2.  **Transfer to the target system:**
-    Move the downloaded file to your Linux system (e.g., NetHunter).
-
-3.  **Make the file executable:**
-    In your terminal, grant the file execution permissions:
-    ```bash
-    chmod +x vadana_bomber
-    ```
-
-4.  **Run the application:**
-    ```bash
-    ./vadana_bomber
-    ```
-After running, select the desired system from the menu, enter the student number and the number of attempts to begin the process.
 
 ---
 
@@ -110,7 +103,7 @@ If you want to build the executable yourself, use `PyInstaller`.
     ```
 
 2.  **Build the executable (on Linux):**
-    Ensure all system dependencies (from Method 1, Step 2) are installed. Then, run the following command:
+    Ensure all system dependencies are installed. Then, run the following command:
     ```bash
     pyinstaller --onefile --name vadana_bomber \
     --add-binary '/usr/bin/chromedriver:.' \
@@ -125,3 +118,9 @@ If you want to build the executable yourself, use `PyInstaller`.
 ## ## 🤝 Contribution
 
 Contributions are welcome! If you have suggestions for improving the script, please open an **Issue** or submit a **Pull Request**.
+
+---
+
+## ## 📄 License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
