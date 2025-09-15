@@ -4,7 +4,6 @@
 
 ![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Linux%20|%20Windows%20(WSL)-orange)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 An automated tool for sending password recovery requests to the Vadana educational system of Islamic Azad University, featuring automatic CAPTCHA solving.
 
