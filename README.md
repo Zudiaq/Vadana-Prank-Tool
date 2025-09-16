@@ -3,8 +3,8 @@
 <div align="center">
   <table>
     <tr>
-      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/menu.jpg" alt="Menu Selection" width="350"></td>
-      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/prog.jpg" alt="Progress View" width="350"></td>
+      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/menu.jpg" alt="Menu Selection" width="250"></td>
+      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/prog.jpg" alt="Progress View" width="250"></td>
     </tr>
   </table>
 </div>
@@ -124,6 +124,6 @@ If you want to build the executable yourself, use `PyInstaller`.
 
 ---
 
-## ## 🤝 Contribution
+## 🤝 Contribution
 
 Contributions are welcome! If you have suggestions for improving the script, please open an **Issue** or submit a **Pull Request**.
