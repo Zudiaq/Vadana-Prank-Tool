@@ -3,8 +3,8 @@
 <div align="center">
   <table>
     <tr>
-      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/menu.jpg" alt="Menu Selection" width="250"></td>
-      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/prog.jpg" alt="Progress View" width="250"></td>
+      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/menu.jpg" alt="Menu Selection" width="100"></td>
+      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/prog.jpg" alt="Progress View" width="100"></td>
     </tr>
   </table>
 </div>
