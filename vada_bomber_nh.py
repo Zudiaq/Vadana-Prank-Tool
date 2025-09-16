@@ -32,7 +32,7 @@ def clear_screen():
 
 def resource_path(relative_path):
     try:
-        base_path = sys._MEIPASS  # type: ignore
+        base_path = sys._MEIPASS 
     except Exception:
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
@@ -367,7 +367,6 @@ def main():
                     if msg:
                         push_error(msg)
 
-            # Update progress description 
             progress.update(task, advance=1, description="Sending...")
             live.update(render_layout())
 
@@ -383,3 +382,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
