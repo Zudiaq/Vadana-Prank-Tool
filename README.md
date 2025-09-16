@@ -1,5 +1,10 @@
 # Vadana SMS Prank Tool
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/menu.jpg" alt="Menu Selection" width="420">
+  <img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/prog.jpg" alt="Progress View" width="420">
+</p>
+
 <div align="center">
 
 ![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)
@@ -118,9 +123,3 @@ If you want to build the executable yourself, use `PyInstaller`.
 ## ## 🤝 Contribution
 
 Contributions are welcome! If you have suggestions for improving the script, please open an **Issue** or submit a **Pull Request**.
-
----
-
-## ## 📄 License
-
-This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
