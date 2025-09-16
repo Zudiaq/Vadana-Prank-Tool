@@ -1,9 +1,13 @@
 # Vadana SMS Prank Tool
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/menu.jpg" alt="Menu Selection" width="420">
-  <img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/prog.jpg" alt="Progress View" width="420">
-</p>
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/menu.jpg" alt="Menu Selection" width="350"></td>
+      <td><img src="https://raw.githubusercontent.com/Zudiaq/Vadana-Prank-Tool/main/prog.jpg" alt="Progress View" width="350"></td>
+    </tr>
+  </table>
+</div>
 
 <div align="center">
 
