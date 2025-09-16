@@ -22,7 +22,7 @@ An automated tool for sending password recovery requests to the Vadana education
 
 ---
 
-## ## 🚀 Features
+## 🚀 Features
 
 -   **Multi-Campus Support:** Includes a default list of various university campuses.
 -   **Manual URL Entry:** Can be used for any other Vadana system by providing a custom URL.
@@ -33,23 +33,23 @@ An automated tool for sending password recovery requests to the Vadana education
 
 ---
 
-## ## ‼️ Disclaimer
+## ‼️ Disclaimer
 
 The misuse of this tool for harassment, spamming, or any illegal activities is strictly prohibited. The developer assumes no responsibility for any improper use of this script. Please use it responsibly.
 
 ---
 
-## ## 🛠️ Requirements
+## 🛠️ Requirements
 
 -   **Google Chrome** or **Chromium Browser** must be installed on the target system.
 
 ---
 
-## ## ⚙️ Installation and Usage
+## ⚙️ Installation and Usage
 
 There are two primary ways to use this tool: running a pre-compiled release or running from the source code.
 
-### ### Method 1: Run from a Pre-compiled Release (Recommended for Users)
+### Method 1: Run from a Pre-compiled Release (Recommended for Users)
 
 This is the easiest way to get started. No need to install Python or any dependencies.
 
@@ -76,7 +76,7 @@ This is the easiest way to get started. No need to install Python or any depende
 
 ---
 
-### ### Method 2: Run from Source Code (For Developers)
+### Method 2: Run from Source Code (For Developers)
 
 1.  **Clone the repository:**
     ```bash
@@ -102,7 +102,7 @@ This is the easiest way to get started. No need to install Python or any depende
 
 ---
 
-## ## 🔧 How to Build
+## 🔧 How to Build
 
 If you want to build the executable yourself, use `PyInstaller`.
 
