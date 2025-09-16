@@ -51,18 +51,18 @@ This is the easiest way to get started. No need to install Python or any depende
 3.  Transfer the file to your NetHunter environment.
 4.  Open a terminal, make the file executable, and run it:
     ```bash
-    chmod +x vada_bomber_ARM
-    ./vada_bomber_ARM
+    chmod +x vada_bomber_arm
+    ./vada_bomber_arm
     ```
 
 #### **On WSL / x86-based Linux (e.g., PC/Laptop):**
 
 1.  Navigate to the [Releases](https://github.com/Zudiaq/Vadana-Prank-Tool/releases) page.
-2.  Download the `vada_bomber_x86` asset.
+2.  Download the `vada_bomber_x86_64` asset.
 3.  Open a terminal in the download location, make the file executable, and run it:
     ```bash
-    chmod +x vada_bomber_x86
-    ./vada_bomber_x86
+    chmod +x vada_bomber_x86_64
+    ./vada_bomber_x86_64
     ```
 
 ---
